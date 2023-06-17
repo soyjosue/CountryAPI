@@ -118,7 +118,7 @@ pipeline {
             steps {
                 script{
                     sh ''' 
-                    docker build -t ams/country:${env.GitVersion_FullSemVer} .
+                    docker build -t ams/country:1 .
                     '''
                     }
                 }                    
