@@ -51,7 +51,7 @@ pipeline {
         stage('major')
         {
             when {
-                branch "major/*"
+                branch "major-*"
             }
             steps {
                 echo "${env.BRANCH_NAME}"
@@ -84,7 +84,7 @@ pipeline {
         stage('Feature')
         {
             when {
-                branch "feature/*"
+                branch "feature-*"
             }
             steps {
                 echo "${env.BRANCH_NAME}"
@@ -117,7 +117,7 @@ pipeline {
         stage('BugFix')
         {
             when {
-                branch "bugfix/*"
+                branch "bugfix-*"
             }
             steps {
                 echo "${env.BRANCH_NAME}"
