@@ -27,6 +27,10 @@ pipeline {
                     env.GitVersion_AssemblySemVer = props.GitVersion_AssemblySemVer
                     env.GitVersion_MajorMinorPatch = props.GitVersion_MajorMinorPatch
                     env.GitVersion_Sha = props.GitVersion_Sha
+
+                    sh ''' 
+                    docker build -t ams/country:${env.GitVersion_FullSemVer} .
+                    '''
                 }
             }
         }
@@ -34,9 +38,7 @@ pipeline {
         stage('build') {
             steps {
                 script{
-                    sh ''' 
-                    docker build -t ams/country:${env.GitVersion_FullSemVer} .
-                    '''
+                    
                     }
                 }                    
             }
