@@ -92,7 +92,7 @@ pipeline {
 
                 sh '''
                     printenv
-                    /var/jenkins_home/.dotnet/tools/dotnet-gitversion /output buildserver
+                    /root/.dotnet/tools/dotnet-gitversion /output buildserver
                 '''
 
                 echo "This is feature branch Execution"
