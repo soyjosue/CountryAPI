@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script{
                     sh ''' 
-                    docker build docker build -t ${name_final} .
+                    docker build -t ${name_final} .
                     '''
                     }
                 }                    
