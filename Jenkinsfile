@@ -14,6 +14,8 @@ pipeline {
                     env.GitVersion_MajorMinorPatch = props.GitVersion_MajorMinorPatch
                     env.GitVersion_Sha = props.GitVersion_Sha
 
+                    echo env.GitVersion_FullSemVer
+
                     sh ''' 
                     docker build -t ams/country:${env.GitVersion_FullSemVer} .
                     '''
