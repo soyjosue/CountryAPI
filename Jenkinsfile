@@ -1,20 +1,6 @@
 pipeline {
   agent any
-    environment {
-        name_final = "ams/country:${currentBuild.number}"        
-    }
     stages {
-        stage('Branch name')
-        {
-            steps {
-                echo "${env.BRANCH_NAME}"
-
-                sh '''
-                    printenv
-                '''
-            }
-        }
-
         stage('Get GITVERSION')
         {
             steps {
