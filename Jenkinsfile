@@ -119,7 +119,7 @@ pipeline {
                 script{
                     echo env.GitVersion_FullSemVer
                     sh ''' 
-                    docker build -t ams/country:${env.GitVersion_MajorMinorPatch} .
+                    docker build -t ams/country:''' + ${env.GitVersion_MajorMinorPatch} + ''' .
                     '''
                     }
                 }                    
