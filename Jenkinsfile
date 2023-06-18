@@ -116,7 +116,7 @@ pipeline {
 
         stage('build') {
             steps {
-                sh "docker build -t ${env.GitVersion_MajorMinorPatch} ."
+                sh "docker build -t ams/country:${env.GitVersion_MajorMinorPatch} ."
             }
           
         }   
